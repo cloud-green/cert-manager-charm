@@ -9,7 +9,7 @@ client-cert:
     common-name:
       type: string
       description: common_name specified for client in config
-  required: [common_name]
+  required: [common-name]
   additionalProperties: false
 client-key:
   description: Get client key
@@ -17,7 +17,7 @@ client-key:
     common-name:
       type: string
       description: common_name specified for client in config
-  required: [common_name]
+  required: [common-name]
   additionalProperties: false
 server-cert:
   description: Get server certificate
@@ -25,7 +25,7 @@ server-cert:
     common-name:
       type: string
       description: common_name specified for server in config
-  required: [common_name]
+  required: [common-name]
   additionalProperties: false
 server-key:
   description: Get server key
@@ -33,5 +33,5 @@ server-key:
     common-name:
       type: string
       description: common_name specified for server in config
-  required: [common_name]
+  required: [common-name]
   additionalProperties: false
