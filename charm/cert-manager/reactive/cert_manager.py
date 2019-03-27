@@ -13,7 +13,7 @@ from charms.layer.tls_client import request_client_cert, request_server_cert
 def config_changed():
     if data_changed('cert-manager.clients', hookenv.config().get('clients')):
         try:
-            clients = yaml.loads(hookenv.config().get('clients'))
+            clients = yaml.load(hookenv.config().get('clients'))
             for client in clients:
                 request_client_cert(common_name=client['common_name'],
                                     sans=client.get('sans', []))
@@ -24,7 +24,7 @@ def config_changed():
             return
     if data_changed('cert-manager.servers', hookenv.config().get('servers')):
         try:
-            servers = yaml.loads(hookenv.config().get('servers'))
+            servers = yaml.load(hookenv.config().get('servers'))
             for server in servers:
                 request_server_cert(common_name=server['common_name'],
                                     sans=server.get('sans', []))
