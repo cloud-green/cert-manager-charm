@@ -1,0 +1,12 @@
+#!/usr/local/sbin/charm-env python3
+
+from charms.reactive import endpoint_from_flag
+
+import utils
+
+
+if __name__ == '__main__':
+    certs = endpoint_from_flag('certificates.ca.available')
+	if not certs:
+		utils.fail('certificates not available')
+    utils.ok(certs.root_ca_cert.cert)

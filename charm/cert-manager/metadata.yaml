@@ -1,0 +1,23 @@
+name: cert-manager
+summary: Issue and manage certificates and keys for private self-signed CAs
+maintainer: Casey Marshall <casey.marshall@canonical.com>
+description: |-
+  Manage client and server certificates that are issued by the self-signed
+  CA deployed with the easyrsa charm. Relates to easyrsa and allows creation
+  of client and server certificates that can be used with external systems.
+  
+  This charm can be used to issue certificates for clients that need to connect
+  to a Kafka cluster secured with easyrsa, for example.
+  
+  This charm is not intended to function as a CA root on the public internet.
+  For public TLS endpoint security, Let's Encrypt / certbot should be used
+  instead.  
+
+tags:
+  - tls
+  - security
+  - pki
+subordinate: false
+series:
+- xenial
+- bionic

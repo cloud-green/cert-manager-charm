@@ -1,0 +1,37 @@
+ca-cert:
+  description: Get CA root certificate
+  params: {}
+  required: []
+  additionalProperties: false
+client-cert:
+  description: Get client certificate
+  params:
+    common_name:
+      type: string
+      description: common_name specified for client in config
+  required: [common_name]
+  additionalProperties: false
+client-key:
+  description: Get client key
+  params:
+    common_name:
+      type: string
+      description: common_name specified for client in config
+  required: [common_name]
+  additionalProperties: false
+server-cert:
+  description: Get server certificate
+  params:
+    common_name:
+      type: string
+      description: common_name specified for server in config
+  required: [common_name]
+  additionalProperties: false
+server-key:
+  description: Get server key
+  params:
+    common_name:
+      type: string
+      description: common_name specified for server in config
+  required: [common_name]
+  additionalProperties: false

@@ -1,0 +1,32 @@
+options:
+
+  clients:
+    type: string
+    default: "[]"
+    description: |-
+      YAML array of objects describing client certificates that should be issued.
+      
+      The objects are used to request certificates from layer:tls-client. See
+      https://github.com/juju-solutions/layer-tls-client#to-request-a-certificate
+      for details.
+      
+      Example:
+      - common_name: alice
+        sans: ['alicia']
+      - common_name: bob
+        sans: ['robert']
+
+  servers:
+    type: string
+    default: "[]"
+    description: |-
+      YAML array of objects describing server certificates that should be issued.
+      
+      The objects are used to request certificates from layer:tls-client. See
+      https://github.com/juju-solutions/layer-tls-client#to-request-a-certificate
+      for details.
+      
+      Example:
+      - common_name: magical-ray.example.com
+        sans: ['1.2.3.4', '10.10.1.34']
+
