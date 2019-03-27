@@ -9,3 +9,9 @@ charm/builds/cert-manager:
 
 clean:
 	$(RM) -r charm/builds
+
+sysdeps: /snap/bin/charm /usr/bin/flake8
+/snap/bin/charm:
+	sudo snap install charm --classic
+/usr/bin/flake8:
+	sudo apt-get install -y flake8
