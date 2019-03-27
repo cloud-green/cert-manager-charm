@@ -6,7 +6,7 @@ ca-cert:
 client-cert:
   description: Get client certificate
   params:
-    common_name:
+    common-name:
       type: string
       description: common_name specified for client in config
   required: [common_name]
@@ -14,7 +14,7 @@ client-cert:
 client-key:
   description: Get client key
   params:
-    common_name:
+    common-name:
       type: string
       description: common_name specified for client in config
   required: [common_name]
@@ -22,7 +22,7 @@ client-key:
 server-cert:
   description: Get server certificate
   params:
-    common_name:
+    common-name:
       type: string
       description: common_name specified for server in config
   required: [common_name]
@@ -30,7 +30,7 @@ server-cert:
 server-key:
   description: Get server key
   params:
-    common_name:
+    common-name:
       type: string
       description: common_name specified for server in config
   required: [common_name]

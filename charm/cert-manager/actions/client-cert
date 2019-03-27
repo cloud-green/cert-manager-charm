@@ -8,8 +8,8 @@ import utils
 
 
 if __name__ == '__main__':
-	cn = hookenv.action_get('common_name')
+    cn = hookenv.action_get('common-name')
     certs = endpoint_from_flag('certificates.ca.available')
-	if not certs:
-		utils.fail('certificates not available')
+    if not certs:
+        utils.fail('certificates not available')
     utils.ok(certs.client_certs_map[cn].cert)
