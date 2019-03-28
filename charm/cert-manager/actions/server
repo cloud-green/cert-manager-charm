@@ -12,4 +12,3 @@ if __name__ == '__main__':
                          utils.key(cn, 'servers'))
     except Exception as e:
         utils.fail('server {} not available: {}'.format(cn, e))
-        raise

@@ -11,4 +11,3 @@ if __name__ == '__main__':
             utils.ok_cert(f.read())
     except Exception as e:
         utils.fail('ca cert not available: {}'.format(e))
-        raise
