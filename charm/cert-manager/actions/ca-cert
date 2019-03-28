@@ -6,7 +6,9 @@ import utils
 
 
 if __name__ == '__main__':
-    certs = endpoint_from_flag('certificates.ca.available')
-    if not certs:
-        utils.fail('certificates not available')
-    utils.ok(certs.root_ca_cert.cert)
+    try:
+        with open('/etc/ssl/cert-manager/ca.crt') as f:
+            utils.ok_cert(f.read())
+    except Exception as e:
+        utils.fail('ca cert not available: {}'.format(e))
+        raise

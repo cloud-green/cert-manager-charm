@@ -1,4 +1,7 @@
 includes:
 - 'layer:basic'
 - 'layer:tls-client'
+options:
+  tls-client:
+    ca_certificate_path: /etc/ssl/cert-manager/ca.crt
 repo: https://github.com/cloud-green/cert-manager-charm

@@ -1,0 +1,15 @@
+#!/usr/local/sbin/charm-env python3
+
+from charmhelpers.core import hookenv
+
+import utils
+
+
+if __name__ == '__main__':
+    cn = hookenv.action_get('common-name')
+    try:
+        utils.ok_certkey(utils.cert(cn, 'clients'),
+                         utils.key(cn, 'clients'))
+    except Exception as e:
+        utils.fail('client {} not available: {}'.format(cn, e))
+        raise

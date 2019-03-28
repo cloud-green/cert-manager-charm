@@ -3,32 +3,16 @@ ca-cert:
   params: {}
   required: []
   additionalProperties: false
-client-cert:
-  description: Get client certificate
+client:
+  description: Get client certificate and key
   params:
     common-name:
       type: string
       description: common_name specified for client in config
   required: [common-name]
   additionalProperties: false
-client-key:
-  description: Get client key
-  params:
-    common-name:
-      type: string
-      description: common_name specified for client in config
-  required: [common-name]
-  additionalProperties: false
-server-cert:
-  description: Get server certificate
-  params:
-    common-name:
-      type: string
-      description: common_name specified for server in config
-  required: [common-name]
-  additionalProperties: false
-server-key:
-  description: Get server key
+server:
+  description: Get server certificate and key
   params:
     common-name:
       type: string
